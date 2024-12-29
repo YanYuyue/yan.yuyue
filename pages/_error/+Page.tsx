@@ -3,7 +3,7 @@ export { Page }
 import { usePageContext } from '../../renderer/usePageContext'
 
 function Page() {
-  const pageContext = usePageContext()
+  const pageContext = usePageContext() ?? {}
   let { abortReason } = pageContext
   if (!abortReason) {
     abortReason = pageContext.is404 ? 'Page not found.' : 'Something went wrong.'
