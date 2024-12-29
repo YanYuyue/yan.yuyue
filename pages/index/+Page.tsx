@@ -6,14 +6,14 @@ import { Counter } from './Counter'
 import ReactMarkdown from 'react-markdown'
 
 import content from './page.md'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 
-// const D = styled.div`
-//   color: red;
-// `
+const D = styled.div`
+  color: red;
+`
 function Page() {
   return (
-    <>
+    <D>
       <ReactMarkdown>
         {content}
       </ReactMarkdown>
@@ -26,6 +26,6 @@ function Page() {
           Interactive. <Counter />
         </li>
       </ul>
-    </>
+    </D>
   )
 }

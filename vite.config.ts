@@ -37,14 +37,14 @@ const config: UserConfig = {
       prerender: true,
     }),
     react({ 
-      // babel: { 
-      //   plugins: [["babel-plugin-styled-components"]]
-      // } 
+      babel: { 
+        plugins: [["babel-plugin-styled-components"]]
+      } 
     }),
   ],
-  // ssr: {
-  //   noExternal: ['styled-components']
-  // }
+  ssr: {
+    noExternal: ['styled-components']
+  }
 }
 
 export default config
