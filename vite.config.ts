@@ -5,6 +5,14 @@ import { UserConfig } from 'vite'
 
 const config: UserConfig = {
   plugins: [
+    {
+      name: 'md-string',
+      transform(code, id) {
+        if (id.endsWith('.md')) {
+          return `export default ${JSON.stringify(code)}`
+        }
+      }
+    },
     wyw(),
     react(), 
     vike({ prerender: true })

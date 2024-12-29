@@ -5,7 +5,8 @@
     "build": "vite build",
     "server": "node --loader ts-node/esm ./server/index.ts",
     "server:dev": "npm run server",
-    "server:prod": "cross-env NODE_ENV=production npm run server"
+    "server:prod": "cross-env NODE_ENV=production npm run server",
+    "publish": "gh-pages -d dist/client"
   },
   "dependencies": {
     "@linaria/core": "^6.2.0",
@@ -32,6 +33,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@wyw-in-js/vite": "^0.5.5"
+    "@wyw-in-js/vite": "^0.5.5",
+    "gh-pages": "^6.2.0"
   }
 }

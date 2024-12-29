@@ -6,18 +6,11 @@ import {styled} from '@linaria/react'
 
 import ReactMarkdown from 'react-markdown'
 
+import content from './page.md'
+
 const D = styled.div`
   color: red;
 `
-
-const content = `
-# Test Title
-
-test content
-
-\`test blockquote\`
-`;
-
 function Page() {
   return (
     <D>
