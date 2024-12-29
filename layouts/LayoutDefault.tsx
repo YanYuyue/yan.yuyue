@@ -1,18 +1,42 @@
 import "./style.css";
-
+import styled from "styled-components";
 import React from "react";
 import logoUrl from "../assets/logo.svg";
 import { Link } from "../components/Link.js";
 
+const Container = styled.div`
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+`;
+
+const SidebarWrapper = styled.div`
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8em;
+  border-right: 2px solid #eee;
+`;
+
+const PageContainer = styled.div`
+  /* id: page-container; */
+`;
+
+const PageContent = styled.div`
+  padding: 20px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+`;
+
+const LogoWrapper = styled.div`
+  margin-top: 20px;
+  margin-bottom: 10px;
+`;
+
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        maxWidth: 900,
-        margin: "auto",
-      }}
-    >
+    <Container>
       <Sidebar>
         <Logo />
         <Link href="/">Welcome</Link>
@@ -21,56 +45,28 @@ export default function LayoutDefault({ children }: { children: React.ReactNode 
         {""}
       </Sidebar>
       <Content>{children}</Content>
-    </div>
+    </Container>
   );
 }
 
 function Sidebar({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      id="sidebar"
-      style={{
-        padding: 20,
-        flexShrink: 0,
-        display: "flex",
-        flexDirection: "column",
-        lineHeight: "1.8em",
-        borderRight: "2px solid #eee",
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <SidebarWrapper>{children}</SidebarWrapper>;
 }
 
 function Content({ children }: { children: React.ReactNode }) {
   return (
-    <div id="page-container">
-      <div
-        id="page-content"
-        style={{
-          padding: 20,
-          paddingBottom: 50,
-          minHeight: "100vh",
-        }}
-      >
-        {children}
-      </div>
-    </div>
+    <PageContainer>
+      <PageContent>{children}</PageContent>
+    </PageContainer>
   );
 }
 
 function Logo() {
   return (
-    <div
-      style={{
-        marginTop: 20,
-        marginBottom: 10,
-      }}
-    >
+    <LogoWrapper>
       <a href="/">
         <img src={logoUrl} height={64} width={64} alt="logo" />
       </a>
-    </div>
+    </LogoWrapper>
   );
 }
