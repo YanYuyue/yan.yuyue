@@ -17,6 +17,7 @@ const NavBarContainer = styled.div`
 
 const NavBarWrapper = styled.div`
   padding: 20px;
+  height: 80px;
   max-width: var(--layout-max-width);
   margin: 0 auto;
 

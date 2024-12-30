@@ -1,16 +1,18 @@
 import ReactMarkdown from 'react-markdown'
 
 import content from './page.md'
+import { Container } from './Container'
+import { PhotoBox } from './PhotoBox'
 
-export default function() {
+export default function () {
   return (
-    <>
-      <ReactMarkdown>
-        {content}
-      </ReactMarkdown>
-      <h1>Welcome</h1>
-      This page is:
-      test
-    </>
+    <Container>
+      <PhotoBox />
+      <div>
+        <ReactMarkdown>
+          {content}
+        </ReactMarkdown>
+      </div>
+    </Container>
   )
 }
