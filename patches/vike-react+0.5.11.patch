@@ -1,0 +1,12 @@
+diff --git a/node_modules/vike-react/dist/integration/onRenderHtml.js b/node_modules/vike-react/dist/integration/onRenderHtml.js
+index fed2b07..a0a1062 100644
+--- a/node_modules/vike-react/dist/integration/onRenderHtml.js
++++ b/node_modules/vike-react/dist/integration/onRenderHtml.js
+@@ -27,6 +27,7 @@ const onRenderHtml = async (pageContext) => {
+       <body${dangerouslySkipEscape(bodyAttributesString)}>
+         ${bodyHtmlBegin}
+         <div id="root">${pageHtml}</div>
++        <div id="portal-root"></div>
+         ${bodyHtmlEnd}
+       </body>
+     </html>`;

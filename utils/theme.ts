@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { useCallbackRef } from '../utils/useCallbackRef'
+import { useCallbackRef } from './useCallbackRef'
 
 export type Theme = 'dark' | 'light'
 

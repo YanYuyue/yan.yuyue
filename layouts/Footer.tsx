@@ -3,7 +3,7 @@ import { styled } from '@linaria/react';
 
 import { Link } from "./Link";
 import { FaSun, FaMoon } from "react-icons/fa";
-import { useTheme } from './theme';
+import { useTheme } from '../utils/theme';
 
 const FooterContainer = styled.div`
   border-top: 1px solid var(--gray-5);
