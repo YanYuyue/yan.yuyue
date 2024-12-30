@@ -6,7 +6,12 @@ import wyw from '@wyw-in-js/vite'
 
 const config: UserConfig = {
   plugins: [
-    wyw(),
+    wyw({
+      include: ['**/*.{ts,tsx}'],
+      babelOptions: {
+        presets: ['@babel/preset-typescript', '@babel/preset-react'],
+      },
+    }),
     {
       name: 'transform-assets',
       transform(code, id) {

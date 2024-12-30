@@ -10,6 +10,17 @@ const Container = styled.div`
   /* display: flex; */
   max-width: 900px;
   margin: auto;
+
+  .clickable-icon {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.9;
+    }
+  }
 `;
 
 const NavBarWrapper = styled.div`
@@ -69,6 +80,7 @@ function NavBar() {
     <div className='container'>
       <Link href="/">Welcome</Link>
       <Link href="/news">News</Link>
+      <Link href="/cv">CV</Link>
       <Link href="/research">Research</Link>
       <Link href="/publications">Publications</Link>
     </div>

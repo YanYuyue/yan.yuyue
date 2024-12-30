@@ -2,6 +2,8 @@ import { styled } from '@linaria/react';
 import React from 'react';
 import { parseAuthor } from './author';
 import { Entry } from 'bibtex-js-parser';
+import { css, cx } from '@linaria/core';
+import { IoIosCopy } from "react-icons/io";
 
 // 类型定义
 type Author = {
@@ -11,7 +13,7 @@ type Author = {
 };
 
 interface PublicationProps {
-  entry: Entry;
+  entry: Entry & { errors?: string[] };
 }
 
 // 样式组件
@@ -33,18 +35,6 @@ const Title = styled.h3`
   font-size: 1.1rem;
 `;
 
-const Authors = styled.div`
-  color: #34495e;
-  margin-bottom: 0.5rem;
-  font-style: italic;
-`;
-
-const MetaInfo = styled.div`
-  color: #7f8c8d;
-  font-size: 0.9rem;
-  line-height: 1.4;
-`;
-
 const DOILink = styled.a`
   color: #3498db;
   text-decoration: none;
@@ -54,7 +44,39 @@ const DOILink = styled.a`
   }
 `;
 
+const AuthorListWrapper = styled.div`
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+
+  & > .author:nth-child(1n+2)::before {
+    content: ', ';
+  }
+
+  & > .author.highlight {
+    font-weight: bold;
+  }
+`;
+
+const ErrorCard = (props: { errors?: string[], raw: string }) => {
+  const { errors, raw } = props;
+  if (!errors?.length) {
+    return;
+  }
+  return <div className={css`
+    color: red;
+  `}>
+    <pre><code>{raw}</code></pre>
+    Errors occurred while parsing the citation:
+    {errors.map((e, i) => <div key={i}>{e}</div>)}
+  </div>
+}
+
+
 // 格式化作者列表
+
+const isYan = (author: Author) => !!(author && author.first?.toLowerCase() === 'yuyue' && author.last?.toLowerCase() === 'yan');
+
 const formatAuthors = (authors: Author[]) => {
   return authors.map((author, index) => {
     const fullName = `${author.first} ${author.middle.join(' ')} ${author.last}`.trim();
@@ -62,11 +84,47 @@ const formatAuthors = (authors: Author[]) => {
   });
 };
 
-// Publication组件
-export const Publication: React.FC<PublicationProps> = ({ entry }) => {
+const formatAuthor = (author: Author) => {
+  const fullName = `${author.first} ${author.middle.join(' ')} ${author.last}`.trim();
+  return fullName;
+};
+
+const AuthorList = (props: { authors: Author[] }) => {
+  const { authors } = props;
+  return <AuthorListWrapper>
+    {authors.map((author, index) => author && <span
+      key={index} className={cx('author', isYan(author) && 'highlight')}
+    >{formatAuthor(author)}</span>)}
+  </AuthorListWrapper>
+};
+
+
+const MetaInfo = styled.div`
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+
+  position: relative;
+
+  & > .info:nth-child(1n+2)::before {
+    content: ', ';
+  }
+
+  & > .cite-copy {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+`;
+
+export const Publication = ({ entry }: PublicationProps) => {
   // 解析作者字符串
   const authors = parseAuthor(entry.author ?? '');
-  
+
+  if (authors.findIndex(isYan) === -1) {
+    return;
+  }
+
   // 构建引用信息
   const getVenue = () => {
     if (entry.journal) return entry.journal;
@@ -85,23 +143,27 @@ export const Publication: React.FC<PublicationProps> = ({ entry }) => {
   return (
     <PublicationWrapper>
       <Title>{entry.title}</Title>
-      <Authors>{formatAuthors(authors)}</Authors>
+      <AuthorList authors={authors} />
       <MetaInfo>
-        {getVenue()}
-        {' '}
-        {getVolInfo()}
-        {entry.publisher && `, ${entry.publisher}`}
-        {', '}
-        {entry.year}
+        <span className='info'>{getVenue()}</span>
+        <span className='info'>{getVolInfo()}</span>
+        {entry.publisher && <>
+          <span className='info'>{entry.publisher}</span>
+          <span className='info'>{entry.year || '<Unknown Year>'}</span>
+        </>}
         {entry.doi && (
-          <>
+          <span className='info'>
             {' · '}
             <DOILink href={`https://doi.org/${entry.doi}`} target="_blank" rel="noopener noreferrer">
               DOI: {entry.doi}
             </DOILink>
-          </>
+          </span>
         )}
+        <div className='cite-copy clickable-icon' onClick={() => navigator.clipboard.writeText(entry.raw)}>
+          <IoIosCopy />
+        </div>
       </MetaInfo>
+      <ErrorCard errors={entry.errors} raw={entry.raw} />
     </PublicationWrapper>
   );
 };

@@ -1,19 +1,23 @@
-export { Page }
-
-import { Counter } from './Counter'
-
-
 import ReactMarkdown from 'react-markdown'
 
 import content from './page.md'
 import { styled } from '@linaria/react'
+import { useState } from 'react'
 
-const D = styled.div`
-  color: red;
-`
-function Page() {
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
   return (
-    <D>
+    <button type="button" onClick={() => setCount((count) => count + 1)}>
+      Counter {count}
+    </button>
+  );
+}
+
+export default function() {
+  return (
+    <>
       <ReactMarkdown>
         {content}
       </ReactMarkdown>
@@ -26,6 +30,6 @@ function Page() {
           Interactive. <Counter />
         </li>
       </ul>
-    </D>
+    </>
   )
 }
