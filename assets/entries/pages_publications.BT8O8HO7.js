@@ -1,5 +1,5 @@
-import{j as e,i as n,o as a,L as i,a as r,b as o}from"../chunks/chunk-4-aUMB19.js";/* empty css                      */import"../chunks/chunk-BcEW-Cv4.js";/* empty css                      */const t=[{type:"error",id:"",raw:`@IEEEtranBSTCTL{bstctl:nodash, CTLdash_repeated_names = "no", }
-`},{id:"euler2018intelligence",type:"article",raw:`@article{euler2018intelligence,
+import{G as d,j as a,s as l,d as p,i as h,o as g,L as y,a as b,b as E}from"../chunks/chunk-TKL58373.js";/* empty css                      *//* empty css                      */import"../chunks/chunk-BcEW-Cv4.js";/* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      *//* empty css                      */function v(e){let i=[],t="",o=0;for(let n=0;n<e.length;n++){const r=e[n];if(r==="{"?o++:r==="}"&&o--,o===0&&e.slice(n,n+5).toLowerCase()===" and "){i.push(t),t="",n+=4;continue}t+=r}return i.push(t),i.map(n=>n.trim()).filter(n=>n.length>0).map(n=>{const r={first:"",middle:[],last:""};if(n=n.replace(/^\{|\}$/g,"").trim(),n.includes(",")){const[s,c]=n.split(",").map(u=>u.trim());if(r.last=s,c){const u=c.split(/\s+/);r.first=u[0]||"",r.middle=u.slice(1)}}else{const s=n.split(/\s+/);s.length===1?r.last=s[0]:(r.first=s[0],r.last=s[s.length-1],r.middle=s.slice(1,-1))}return r})}function f(e){return d({tag:"svg",attr:{viewBox:"0 0 512 512"},child:[{tag:"path",attr:{d:"M352 115h90c3.3 0 6-2.7 6-6 0-8.2-3.7-16-10-21.3l-77.1-64.2c-4.9-4.1-14.2-7.4-20.6-7.4-4.1 0-7.4 3.3-7.4 7.4V96c.1 10.5 8.6 19 19.1 19z"},child:[]},{tag:"path",attr:{d:"M307 96V16H176c-17.6 0-32 14.4-32 32v336c0 17.6 14.4 32 32 32h240c17.6 0 32-14.4 32-32V141h-96c-24.8 0-45-20.2-45-45z"},child:[]},{tag:"path",attr:{d:"M116 412V80H96c-17.6 0-32 14.4-32 32v352c0 17.6 14.4 32 32 32h256c17.6 0 32-14.4 32-32v-20H148c-17.6 0-32-14.4-32-32z"},child:[]}]})(e)}const A=l("div")({name:"PublicationWrapper",class:"p5ts6j7",propsAsIs:!1}),w=l("h3")({name:"Title",class:"t1dr0w2c",propsAsIs:!1}),T=l("a")({name:"DOILink",class:"d10edubu",propsAsIs:!1}),I=l("div")({name:"AuthorListWrapper",class:"a1uogsc8",propsAsIs:!1}),S=e=>{const{errors:i,raw:t}=e;if(i!=null&&i.length)return a.jsxs("div",{className:"c1rsv1ed",children:[a.jsx("pre",{children:a.jsx("code",{children:t})}),"Errors occurred while parsing the citation:",i.map((o,n)=>a.jsx("div",{children:o},n))]})},m=e=>{var i,t;return!!(e&&((i=e.first)==null?void 0:i.toLowerCase())==="yuyue"&&((t=e.last)==null?void 0:t.toLowerCase())==="yan")},k=e=>`${e.first} ${e.middle.join(" ")} ${e.last}`.trim(),C=e=>{const{authors:i}=e;return a.jsx(I,{children:i.map((t,o)=>t&&a.jsx("span",{className:p("author",m(t)&&"highlight"),children:k(t)},o))})},R=l("div")({name:"MetaInfo",class:"m1v42xx7",propsAsIs:!1}),L=({entry:e})=>{const i=v(e.author??"");if(i.findIndex(m)===-1)return;const t=()=>e.journal?e.journal:e.booktitle?e.booktitle:"",o=()=>{const n=[];return e.volume&&n.push(`vol. ${e.volume}`),e.number&&n.push(`no. ${e.number}`),e.pages&&n.push(`pp. ${e.pages}`),n.length>0?`(${n.join(", ")})`:""};return a.jsxs(A,{children:[a.jsx(w,{children:e.title}),a.jsx(C,{authors:i}),a.jsxs(R,{children:[a.jsx("span",{className:"info",children:t()}),a.jsx("span",{className:"info",children:o()}),e.publisher&&a.jsxs(a.Fragment,{children:[a.jsx("span",{className:"info",children:e.publisher}),a.jsx("span",{className:"info",children:e.year||"<Unknown Year>"})]}),e.doi&&a.jsxs("span",{className:"info",children:[" · ",a.jsxs(T,{href:`https://doi.org/${e.doi}`,target:"_blank",rel:"noopener noreferrer",children:["DOI: ",e.doi]})]}),a.jsx("div",{className:"cite-copy clickable-icon",onClick:()=>navigator.clipboard.writeText(e.raw),children:a.jsx(f,{})})]}),a.jsx(S,{errors:e.errors,raw:e.raw})]})},j=[{type:"error",id:"",raw:`@IEEEtranBSTCTL{bstctl:nodash, CTLdash_repeated_names = "no", }
+`,errors:[]},{id:"euler2018intelligence",type:"article",raw:`@article{euler2018intelligence,
   title={Intelligence and uncertainty: Implications of hierarchical predictive processing for the neuroscience of cognitive ability},
   author={Euler, Matthew J},
   journal={Neurosci. Biobehav. Rev.},
@@ -142,7 +142,7 @@ On Resilience Against Cyber-Physical Uncertainties in Distributed {N}ash Equilib
     journal={IEEE/CAA Journal of Automatica Sinica},
  doi={10.1109/JAS.2024.124803}
  }
-`},{id:"ye2023distributed",type:"article",raw:`@article{ye2023distributed,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:3 mismatched input 'Resilience' expecting '='","line 3:14 mismatched input 'Against' expecting '='","line 3:22 mismatched input 'Cyber-Physical' expecting '='","line 3:37 mismatched input 'Uncertainties' expecting '='","line 3:51 mismatched input 'in' expecting '='","line 3:54 mismatched input 'Distributed' expecting '='","line 3:66 missing '=' at '{N}ash Equilibrium Seeking Strategies for Heterogeneous Games}'","line 7:1 missing ',' at '}'","Error: The type of field title value is not supported."]},{id:"ye2023distributed",type:"article",raw:`@article{ye2023distributed,
   title={Distributed {N}ash equilibrium seeking in games with partial decision information: A survey},
   author={Ye, Maojiao and Han, Qing-Long and Ding, Lei and Xu, Shengyuan},
   journal={Proceedings of the IEEE},
@@ -174,7 +174,7 @@ On Resilience Against Cyber-Physical Uncertainties in Distributed {N}ash Equilib
   year={1999},
   publisher={Springer Science \\& Business Media}
 }
-`},{id:"wu2021agent",type:"article",raw:`@article{wu2021agent,
+`,errors:["line 6:12 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 6:30 token recognition error at: '\\'","line 6:31 token recognition error at: '&'","line 6:22 mismatched input 'Science' expecting '='","line 6:33 mismatched input 'Business' expecting '='","line 6:42 mismatched input 'Media' expecting '='","line 6:47 mismatched input '}' expecting '='","Error: The type of field publisher value is not supported."]},{id:"wu2021agent",type:"article",raw:`@article{wu2021agent,
   title={Agent transformation of Bayesian games},
   author={Wu, Yuhu and Le, Shuting and Zhang, Kuize and Sun, Xi-Ming},
   journal={IEEE Trans. Autom. Contr.},
@@ -210,7 +210,7 @@ On Resilience Against Cyber-Physical Uncertainties in Distributed {N}ash Equilib
   year={2019},
   publisher={{\\'E}rudit}
 }
-`},{id:"riehl2018incentive",type:"article",raw:`@article{riehl2018incentive,
+`,errors:["line 9:12 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 9:14 token recognition error at: '\\'","line 9:15 token recognition error at: '''","line 9:17 mismatched input '}' expecting '='","Error: The type of field publisher value is not supported."]},{id:"riehl2018incentive",type:"article",raw:`@article{riehl2018incentive,
   title={Incentive-based control of asynchronous best-response dynamics on binary decision networks},
   author={Riehl, James and Ramazi, Pouria and Cao, Ming},
   journal={IEEE Trans. Contr. Netw. Syst.},
@@ -257,7 +257,7 @@ On Resilience Against Cyber-Physical Uncertainties in Distributed {N}ash Equilib
   pages={{\\color{blue}355--366}},
   year={{\\color{blue}2018}}
 }
-`},{type:"error",id:"",raw:`@article{allcott2019welfare,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}A systematic scoping review of the choice architecture movement: Toward understanding when and why nudges work}}'","line 4:10 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:12 token recognition error at: '\\'","line 4:18 missing '=' at '{blue}J. Behav. Dec. Mak.}}'","line 5:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 5:11 token recognition error at: '\\'","line 5:17 missing '=' at '{blue}31}}'","line 6:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 6:11 token recognition error at: '\\'","line 6:17 missing '=' at '{blue}3}}'","line 7:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 7:10 token recognition error at: '\\'","line 7:16 missing '=' at '{blue}355--366}}'","line 8:7 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 8:9 token recognition error at: '\\'","line 8:15 missing '=' at '{blue}2018}}'","line 9:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@article{allcott2019welfare,
   title={{\\color{blue}The welfare effects of nudges: A case study of energy use social comparisons}},
   author={Allcott, Hunt and Kessler, Judd B},
   journal={{\\color{blue}Am. Econ. J. Appl. Econ.}},
@@ -266,20 +266,20 @@ On Resilience Against Cyber-Physical Uncertainties in Distributed {N}ash Equilib
   pages={{\\color{blue}236--276}},
   year={{\\color{blue}2019}}
 }
-`},{type:"error",id:"",raw:`@inproceedings{tian2021anytime,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}The welfare effects of nudges: A case study of energy use social comparisons}}'","line 4:10 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:12 token recognition error at: '\\'","line 4:18 missing '=' at '{blue}Am. Econ. J. Appl. Econ.}}'","line 5:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 5:11 token recognition error at: '\\'","line 5:17 missing '=' at '{blue}11}}'","line 6:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 6:11 token recognition error at: '\\'","line 6:17 missing '=' at '{blue}1}}'","line 7:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 7:10 token recognition error at: '\\'","line 7:16 missing '=' at '{blue}236--276}}'","line 8:7 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 8:9 token recognition error at: '\\'","line 8:15 missing '=' at '{blue}2019}}'","line 9:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@inproceedings{tian2021anytime,
   title={{\\color{blue}Anytime game-theoretic planning with active reasoning about humans’ latent states for human-centered robots}},
   author={Tian, Ran and Sun, Liting and Tomizuka, Masayoshi and Isele, David},
   booktitle={Proc. IEEE Int. Conf. Robot. Autom.},
   pages={4509--4515},
   year={{\\color{blue}2021}} 
 }
-`},{type:"error",id:"",raw:`@book{thaler2009nudge,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}Anytime game-theoretic planning with active reasoning about humans’ latent states for human-centered robots}}'","line 6:7 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 6:9 token recognition error at: '\\'","line 6:15 missing '=' at '{blue}2021}}'","line 7:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@book{thaler2009nudge,
   title={{\\color{blue}Nudge: Improving Decisions About Health, Wealth, And Happiness}},
   author={Thaler, Richard H and Sunstein, Cass R},
   year={{\\color{blue}2009}},
   publisher={{\\color{blue}Penguin}}
 }
-`},{id:"ferguson2021effectiveness",type:"article",raw:`@article{ferguson2021effectiveness,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}Nudge: Improving Decisions About Health, Wealth, And Happiness}}'","line 4:7 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:9 token recognition error at: '\\'","line 4:15 missing '=' at '{blue}2009}}'","line 5:12 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 5:14 token recognition error at: '\\'","line 5:20 missing '=' at '{blue}Penguin}}'","line 6:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{id:"ferguson2021effectiveness",type:"article",raw:`@article{ferguson2021effectiveness,
   title={The effectiveness of subsidies and tolls in congestion games},
   author={Ferguson, Bryce L and Brown, Philip N and Marden, Jason R},
   journal={IEEE Trans. Autom. Contr.},
@@ -305,7 +305,7 @@ journal={{\\color{blue}Adv. Neural Inf. Process. Syst.}},
   pages={16903--16917},
   year={2022}
 }
-`},{type:"error",id:"",raw:`@article{arrow1961constraint,
+`,errors:["line 3:6 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:8 token recognition error at: '\\'","line 3:14 missing '=' at '{blue}Recursive reasoning in minimax games: A Level k gradient play method}}'","line 5:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 5:10 token recognition error at: '\\'","line 5:16 missing '=' at '{blue}Adv. Neural Inf. Process. Syst.}}'","line 9:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@article{arrow1961constraint,
   title={{\\color{blue}Constraint qualifications in maximization problems}},
   author={Arrow, Kenneth J and Hurwicz, Leonid and Uzawa, Hirofumi},
   journal={{\\color{blue}Nav. Res. Logist. Q.}},
@@ -315,7 +315,7 @@ journal={{\\color{blue}Adv. Neural Inf. Process. Syst.}},
   year={1961},
   publisher={Wiley Online Library}
 }
-`},{type:"error",id:"",raw:`@article{lin1993proactive,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}Constraint qualifications in maximization problems}}'","line 4:10 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:12 token recognition error at: '\\'","line 4:18 missing '=' at '{blue}Nav. Res. Logist. Q.}}'","line 10:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@article{lin1993proactive,
   title={{\\color{blue}Proactive or reactive: An analysis of the effect of agent style on organizational decision-making performance}},
   author={Lin, Zhiang and Carley, Kathleen},
   journal={Intell. Syst. Account. Finance Manag.},
@@ -325,7 +325,7 @@ journal={{\\color{blue}Adv. Neural Inf. Process. Syst.}},
   year={1993},
   publisher={Wiley Online Library}
 }
-`},{type:"error",id:"",raw:`@article{abou2020proactive,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}Proactive or reactive: An analysis of the effect of agent style on organizational decision-making performance}}'","line 10:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@article{abou2020proactive,
   title={{\\color{blue}A proactive decision support system for predicting traffic crash events: A critical analysis of imbalanced class distribution}},
   author={Abou Elassad, Zouhair Elamrani and Mousannif, Hajar and Al Moatassime, Hassan},
   journal={Knowl. Based Syst.},
@@ -334,14 +334,14 @@ journal={{\\color{blue}Adv. Neural Inf. Process. Syst.}},
   year={2020},
   publisher={Elsevier}
 }
-`},{type:"error",id:"",raw:`@article{arrow1958stability,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}A proactive decision support system for predicting traffic crash events: A critical analysis of imbalanced class distribution}}'","line 9:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@article{arrow1958stability,
   title={{\\color{blue}On the stability of the competitive equilibrium, I}},
   author={Arrow, Kenneth J and Hurwicz, Leonid},
   journal={{\\color{blue}Econometrica}},
   pages={{\\color{blue}522--552}},
   year={{\\color{blue}1958}} 
 }
-`},{id:"yan2022incentive",type:"inproceedings",raw:`@inproceedings{yan2022incentive,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:10 token recognition error at: '\\'","line 2:16 missing '=' at '{blue}On the stability of the competitive equilibrium, I}}'","line 4:10 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:12 token recognition error at: '\\'","line 4:18 missing '=' at '{blue}Econometrica}}'","line 5:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 5:10 token recognition error at: '\\'","line 5:16 missing '=' at '{blue}522--552}}'","line 6:7 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 6:9 token recognition error at: '\\'","line 6:15 missing '=' at '{blue}1958}}'","line 7:0 missing ',' at '}'","Error: The type of field title value is not supported."]},{id:"yan2022incentive",type:"inproceedings",raw:`@inproceedings{yan2022incentive,
   title={Incentive Design for Noncooperative Dynamical Systems Under Sustainable Budget Constraint For Pareto Improvement},
   author={Yan, Yuyue and Hayakawa, Tomohisa},
   booktitle={Proc. Am. Contr. Conf.},
@@ -591,7 +591,7 @@ Sustainable Budget Constraint},
     year={2024},
   url={https://doi.org/10.1109/TAC.2023.3325412} 
 }
-`},{id:"barrera2014dynamic",type:"article",raw:`@article{barrera2014dynamic,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:26 mismatched input 'Incentive' expecting '='","line 2:36 mismatched input 'Mechanism' expecting '='","line 2:46 mismatched input 'for' expecting '='","line 3:0 mismatched input 'Noncooperative' expecting '='","line 3:15 mismatched input 'Dynamical' expecting '='","line 3:25 mismatched input 'Systems' expecting '='","line 3:33 mismatched input 'Under' expecting '='","line 4:0 mismatched input 'Sustainable' expecting '='","line 4:12 mismatched input 'Budget' expecting '='","line 4:19 mismatched input 'Constraint' expecting '='","line 4:29 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{id:"barrera2014dynamic",type:"article",raw:`@article{barrera2014dynamic,
   title={Dynamic incentives for congestion control},
   author={Barrera, Jorge and Garcia, Alfredo},
   journal={IEEE Trans. Autom. Contr.},
@@ -613,7 +613,7 @@ Sustainable Budget Constraint},
   year={2007},
   publisher={Springer}
 }
-`},{type:"error",id:"",raw:`@article{yan2024Incorporation,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:16 token recognition error at: '\\'","line 3:15 mismatched input '{' expecting '='","line 3:18 missing '=' at '{s}}'","line 3:22 extraneous input 'ek' expecting ','","line 3:29 token recognition error at: '\\'","line 3:28 mismatched input '{' expecting '='","line 3:31 missing '=' at '{r}}'","line 3:36 token recognition error at: '\\'","line 3:37 token recognition error at: '''","line 3:38 token recognition error at: '\\'","line 3:35 mismatched input '{' expecting ','","line 3:40 mismatched input '}' expecting '='","Error: The type of field author value is not supported."]},{type:"error",id:"",raw:`@article{yan2024Incorporation,
   title={Incorporation of Likely Future Actions of Agents into Pseudo-Gradient Dynamics of
 Noncooperative Games},
   author={Yan, Yuyue and Hayakawa, Tomohisa},
@@ -624,7 +624,7 @@ Noncooperative Games},
   pages={7662--7677}
 }
 
-`},{id:"yan2021hierarchical",type:"article",raw:`@article{yan2021hierarchical,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:23 mismatched input 'of' expecting '='","line 2:26 mismatched input 'Likely' expecting '='","line 2:33 mismatched input 'Future' expecting '='","line 2:40 mismatched input 'Actions' expecting '='","line 2:48 mismatched input 'of' expecting '='","line 2:51 mismatched input 'Agents' expecting '='","line 2:58 mismatched input 'into' expecting '='","line 2:63 mismatched input 'Pseudo-Gradient' expecting '='","line 2:79 mismatched input 'Dynamics' expecting '='","line 2:88 mismatched input 'of' expecting '='","line 3:0 mismatched input 'Noncooperative' expecting '='","line 3:15 mismatched input 'Games' expecting '='","line 3:20 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{id:"yan2021hierarchical",type:"article",raw:`@article{yan2021hierarchical,
   title={Hierarchical Noncooperative Dynamical Systems Under Intra-group and Inter-group Incentives},
   author={Yan, Yuyue and Hayakawa, Tomohisa},
  journal={IEEE Trans. Contr. Netw. Syst.},
@@ -669,7 +669,7 @@ year={2024},
   publisher={IEEE}
 }
 
-`},{id:"Cao2018bestresponse",type:"article",raw:`@article{Cao2018bestresponse,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:15 token recognition error at: '\\'","line 3:16 token recognition error at: '''","line 3:14 mismatched input '{' expecting '='","line 3:18 mismatched input '}' expecting '='","Error: The type of field author value is not supported."]},{id:"Cao2018bestresponse",type:"article",raw:`@article{Cao2018bestresponse,
   title={Asynchronous decision-making dynamics under best-response update rule in finite heterogeneous populations},
   author={Ramazi, Pouria and Cao, Ming},
   journal={IEEE Trans. Autom. Contr.},
@@ -696,7 +696,7 @@ year={2024},
   publisher={Elsevier}
 }
 
-`},{id:"Shamma2005Dynamic",type:"article",raw:`@article{Shamma2005Dynamic,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:16 token recognition error at: '\\'","line 3:15 mismatched input '{' expecting '='","line 3:18 missing '=' at '{s}}, Martin and Mezzetti, Claudio}'","line 10:0 missing ',' at '}'","Error: The type of field author value is not supported."]},{id:"Shamma2005Dynamic",type:"article",raw:`@article{Shamma2005Dynamic,
   title={Dynamic fictitious play, dynamic gradient play, and distributed convergence to {N}ash equilibria},
   author={Shamma, Jeff S and Arslan, G{\\"u}rdal},
   journal={IEEE Trans. Autom. Contr.},
@@ -751,7 +751,7 @@ stabilizing noncooperative dynamical systems: Graph analysis},
  
 }
 
-`},{type:"error",id:"",raw:`@inproceedings{yan2019Social,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:19 mismatched input 'of' expecting '='","line 2:22 mismatched input 'feasible' expecting '='","line 2:31 mismatched input 'provisional' expecting '='","line 2:43 mismatched input 'transfer-based' expecting '='","line 2:61 token recognition error at: '/'","line 2:58 mismatched input 'tax' expecting '='","line 2:62 mismatched input 'subsidy' expecting '='","line 2:70 mismatched input 'approach' expecting '='","line 2:79 mismatched input 'for' expecting '='","line 3:0 mismatched input 'stabilizing' expecting '='","line 3:12 mismatched input 'noncooperative' expecting '='","line 3:27 mismatched input 'dynamical' expecting '='","line 3:44 token recognition error at: ':'","line 3:37 mismatched input 'systems' expecting '='","line 3:46 mismatched input 'Graph' expecting '='","line 3:52 mismatched input 'analysis' expecting '='","line 3:60 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@inproceedings{yan2019Social,
   title={Social welfare improvement for noncooperative dynamical systems
 with tax/subsidy approach},
   author={Yan, Yuyue and Hayakawa, Tomohisa},
@@ -760,7 +760,7 @@ with tax/subsidy approach},
   year={2019},
  
 }
-`},{id:"nekouei2016performance",type:"article",raw:`@article{nekouei2016performance,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:16 mismatched input 'welfare' expecting '='","line 2:24 mismatched input 'improvement' expecting '='","line 2:36 mismatched input 'for' expecting '='","line 2:40 mismatched input 'noncooperative' expecting '='","line 2:55 mismatched input 'dynamical' expecting '='","line 2:65 mismatched input 'systems' expecting '='","line 3:0 mismatched input 'with' expecting '='","line 3:8 token recognition error at: '/'","line 3:5 mismatched input 'tax' expecting '='","line 3:9 mismatched input 'subsidy' expecting '='","line 3:17 mismatched input 'approach' expecting '='","line 3:25 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{id:"nekouei2016performance",type:"article",raw:`@article{nekouei2016performance,
   title={Performance analysis of gradient-based {N}ash seeking algorithms under quantization},
   author={Nekouei, Ehsan and Nair, Girish N and Alpcan, Tansu},
   journal={IEEE Trans. Autom. Contr.},
@@ -868,7 +868,7 @@ with tax/subsidy approach},
   year={2019},
   publisher={Elsevier}
 }
-`},{id:"DanielProspect",type:"article",raw:`@article{DanielProspect,
+`,errors:["line 4:10 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:19 mismatched input 'of' expecting '='","line 4:22 mismatched input 'Economic' expecting '='","line 4:40 token recognition error at: '\\'","line 4:41 token recognition error at: '&'","line 4:31 mismatched input 'Behavior' expecting '='","line 4:43 mismatched input 'Organization' expecting '='","line 4:55 mismatched input '}' expecting '='","Error: The type of field journal value is not supported."]},{id:"DanielProspect",type:"article",raw:`@article{DanielProspect,
   title={Prospect theory: An analysis of decision under risk},
   author={Tversky, Amos and Kahneman, Daniel},
   journal={Econometrica},
@@ -955,7 +955,7 @@ with tax/subsidy approach},
   year={2016},
   publisher={IET}
 }
-`},{id:"zhu2018descriptor",type:"article",raw:`@article{zhu2018descriptor,
+`,errors:["line 4:10 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:15 mismatched input 'Control' expecting '='","line 4:30 token recognition error at: '\\'","line 4:31 token recognition error at: '&'","line 4:23 mismatched input 'Theory' expecting '='","line 4:33 mismatched input 'Applications' expecting '='","line 4:45 mismatched input '}' expecting '='","Error: The type of field journal value is not supported."]},{id:"zhu2018descriptor",type:"article",raw:`@article{zhu2018descriptor,
   title={A descriptor system approach to stability and stabilization of discrete-time switched {PWA} systems},
   author={Zhu, Yanzheng and Zhong, Zhixiong and Basin, Michael V and Zhou, Donghua},
   journal={IEEE Trans. Autom. Contr.},
@@ -1011,7 +1011,7 @@ noncooperative dynamical systems},
   year={2019},
  
 } 
-`},{id:"yan2021stability",type:"article",raw:`@article{yan2021stability,
+`,errors:["line 2:34 missing ',' at 'ash'","line 2:38 mismatched input 'equilibrium' expecting '='","line 2:50 mismatched input 'in' expecting '='","line 2:53 mismatched input 'loss-aversion-based' expecting '='","line 3:0 mismatched input 'noncooperative' expecting '='","line 3:15 mismatched input 'dynamical' expecting '='","line 3:25 mismatched input 'systems' expecting '='","line 3:32 mismatched input '}' expecting '='","TypeError: Cannot read properties of null (reading 'STRING_LITERAL')"]},{id:"yan2021stability",type:"article",raw:`@article{yan2021stability,
   title={Stability analysis of {N}ash equilibrium for two-agent loss-aversion-based noncooperative switched systems},
   author={Yan, Yuyue and Hayakawa, Tomohisa},
   journal={IEEE Trans. Autom. Contr.},
@@ -1059,7 +1059,7 @@ Welfare Maximization Using Limited Payoff Information},
   year={submitted}
 } 
 
-`},{type:"error",id:"",raw:`@inproceedings{yan2024Information,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:19 mismatched input 'Design' expecting '='","line 2:26 mismatched input 'in' expecting '='","line 2:29 mismatched input 'Noncooperative' expecting '='","line 2:44 mismatched input 'Dynamical' expecting '='","line 2:54 mismatched input 'Systems' expecting '='","line 2:62 mismatched input 'for' expecting '='","line 2:66 mismatched input 'Social' expecting '='","line 3:0 mismatched input 'Welfare' expecting '='","line 3:8 mismatched input 'Maximization' expecting '='","line 3:21 mismatched input 'Using' expecting '='","line 3:27 mismatched input 'Limited' expecting '='","line 3:35 mismatched input 'Payoff' expecting '='","line 3:42 mismatched input 'Information' expecting '='","line 3:53 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@inproceedings{yan2024Information,
   title={An Information Concealed {P}areto-Efficient Incentive Mechanism For Games With Strong Budget-Balancing
  },
   author={Yan, Yuyue and Ye, Maojiao  and Ding, Lei and  Han, Qing-Long and Hashimoto, Kazumune},
@@ -1079,7 +1079,7 @@ Welfare Maximization Using Limited Payoff Information},
   year={2018},
   publisher={IEEE}
 }
-`},{id:"burbidge1997coalition",type:"article",raw:`@article{burbidge1997coalition,
+`,errors:["line 2:37 missing ',' at 'areto-Efficient'","line 2:53 mismatched input 'Incentive' expecting '='","line 2:63 mismatched input 'Mechanism' expecting '='","line 2:73 mismatched input 'For' expecting '='","line 2:77 mismatched input 'Games' expecting '='","line 2:83 mismatched input 'With' expecting '='","line 2:88 mismatched input 'Strong' expecting '='","line 2:95 mismatched input 'Budget-Balancing' expecting '='","line 3:1 mismatched input '}' expecting '='","TypeError: Cannot read properties of null (reading 'STRING_LITERAL')"]},{id:"burbidge1997coalition",type:"article",raw:`@article{burbidge1997coalition,
   title={A coalition-formation approach to equilibrium federations and trading blocs},
   author={Burbidge, John B and DePater, James A and Myers, Gordon M and Sengupta, Abhijit},
   journal={The American Economic Review},
@@ -1096,7 +1096,7 @@ Welfare Maximization Using Limited Payoff Information},
   year={2008},
   publisher={Taylor \\& Francis}
 }
-`},{id:"haraguchi2016cournot",type:"article",raw:`@article{haraguchi2016cournot,
+`,errors:["line 9:12 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 9:20 token recognition error at: '\\'","line 9:21 token recognition error at: '&'","line 9:23 mismatched input 'Francis' expecting '='","line 9:30 mismatched input '}' expecting '='","Error: The type of field publisher value is not supported."]},{id:"haraguchi2016cournot",type:"article",raw:`@article{haraguchi2016cournot,
   title={Cournot--Bertrand comparison in a mixed oligopoly},
   author={Haraguchi, Junichi and Matsumura, Toshihiro},
   journal={Journal of Economics},
@@ -1179,7 +1179,7 @@ with tax/subsidy approach},
   year={2019},
 %  organization={IEEE}
 }
-`},{type:"error",id:"",raw:`@inproceedings{yan2021Hierarchical,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:16 mismatched input 'welfare' expecting '='","line 2:24 mismatched input 'improvement' expecting '='","line 2:36 mismatched input 'for' expecting '='","line 2:40 mismatched input 'noncooperative' expecting '='","line 2:55 mismatched input 'dynamical' expecting '='","line 2:65 mismatched input 'systems' expecting '='","line 3:0 mismatched input 'with' expecting '='","line 3:8 token recognition error at: '/'","line 3:5 mismatched input 'tax' expecting '='","line 3:9 mismatched input 'subsidy' expecting '='","line 3:17 mismatched input 'approach' expecting '='","line 3:25 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{type:"error",id:"",raw:`@inproceedings{yan2021Hierarchical,
   title={Hierarchical Noncooperative Systems With Dynamic Agents Under
 Intra-group and Inter-group Incentives},
   author={Yan, Yuyue and Hayakawa, Tomohisa},
@@ -1188,7 +1188,7 @@ Intra-group and Inter-group Incentives},
   year={2021},
 %  organization={IEEE}
 }
-`},{id:"fang2020promoting",type:"article",raw:`@article{fang2020promoting,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:22 mismatched input 'Noncooperative' expecting '='","line 2:37 mismatched input 'Systems' expecting '='","line 2:45 mismatched input 'With' expecting '='","line 2:50 mismatched input 'Dynamic' expecting '='","line 2:58 mismatched input 'Agents' expecting '='","line 2:65 mismatched input 'Under' expecting '='","line 3:0 mismatched input 'Intra-group' expecting '='","line 3:12 mismatched input 'and' expecting '='","line 3:16 mismatched input 'Inter-group' expecting '='","line 3:28 mismatched input 'Incentives' expecting '='","line 3:38 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{id:"fang2020promoting",type:"article",raw:`@article{fang2020promoting,
   title={Promoting electric vehicle charging infrastructure considering policy incentives and user preferences: An evolutionary game model in a small-world network},
   author={Fang, Yujuan and Wei, Wei and Mei, Shengwei and Chen, Laijun and Zhang, Xuemin and Huang, Shaowei},
   journal={J. Clean. Prod.},
@@ -1283,7 +1283,7 @@ Intra-group and Inter-group Incentives},
 	address={London},
 }
 
-`},{type:"error",id:"",raw:`@book{Keo:58,
+`,errors:["line 1:17 token recognition error at: ':'","line 1:18 extraneous input '58' expecting ','","line 5:11 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 5:20 token recognition error at: '\\'","line 5:21 token recognition error at: '&'","line 5:23 mismatched input 'Hall' expecting '='","line 5:27 mismatched input '}' expecting '='","Error: The type of field publisher value is not supported."]},{type:"error",id:"",raw:`@book{Keo:58,
 	author={R. Keohane},
 	title={Power and Interdependence: World Politics in Transitions},
 	publisher={Little, Brown \\& Co.},
@@ -1291,7 +1291,7 @@ Intra-group and Inter-group Incentives},
 	address={Boston},
 }
 
-`},{type:"error",id:"",raw:`@article{Pow:85,
+`,errors:["line 1:9 token recognition error at: ':'","line 1:10 extraneous input '58' expecting ','","line 4:11 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 4:26 token recognition error at: '\\'","line 4:27 token recognition error at: '&'","line 4:31 token recognition error at: '.'","line 4:29 mismatched input 'Co' expecting '='","line 4:32 mismatched input '}' expecting '='","Error: The type of field publisher value is not supported."]},{type:"error",id:"",raw:`@article{Pow:85,
 	author={T. Powers},
 	title={Is there a way out?},
 	journal={Harpers},
@@ -1301,7 +1301,7 @@ Intra-group and Inter-group Incentives},
 }
 
 
-`},{id:"Sol",type:"misc",raw:`@misc{Sol:89,
+`,errors:["line 1:12 token recognition error at: ':'","line 1:13 extraneous input '85' expecting ','","line 7:7 mismatched input 'jun' expecting {STRING_LITERAL, INTEGER_LITERAL}","Error: The type of field month value is not supported."]},{id:"Sol",type:"misc",raw:`@misc{Sol:89,
 	author={Solo},
 	year={1989},
 }`,author:"Solo",year:"1989"},{id:"odean1998investors",type:"article",raw:`@article{odean1998investors,
@@ -1468,7 +1468,7 @@ Noncooperative Dynamical Systems},
 }
 
 
-`},{id:"Nishiyama2008Optimal",type:"inproceedings",raw:`@inproceedings{Nishiyama2008Optimal,
+`,errors:["line 2:8 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 2:21 mismatched input 'Analysis' expecting '='","line 2:30 mismatched input 'and' expecting '='","line 2:37 token recognition error at: '/'","line 2:34 mismatched input 'Tax' expecting '='","line 2:38 mismatched input 'subsidy' expecting '='","line 2:46 mismatched input 'Approach' expecting '='","line 2:55 mismatched input 'in' expecting '='","line 3:0 mismatched input 'Noncooperative' expecting '='","line 3:15 mismatched input 'Dynamical' expecting '='","line 3:25 mismatched input 'Systems' expecting '='","line 3:32 mismatched input '}' expecting '='","Error: The type of field title value is not supported."]},{id:"Nishiyama2008Optimal",type:"inproceedings",raw:`@inproceedings{Nishiyama2008Optimal,
   title={Optimal stable state-space partitioning for piecewise linear planar systems},
   author={Nishiyama, Satoshi and Hayakawa, Tomohisa},
   booktitle={American Control Conference},
@@ -1637,7 +1637,7 @@ Noncooperative Dynamical Systems},
 
 
 
-`},{id:"Kutadinata2015Dither",type:"article",raw:`@article{Kutadinata2015Dither,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:26 token recognition error at: '\\'","line 3:25 mismatched input '{' expecting '='","line 3:28 missing '=' at '{s}}'","line 3:33 missing ',' at 'S'","line 3:35 mismatched input 'and' expecting '='","line 3:39 mismatched input 'Johansson' expecting '='","line 3:48 mismatched input ',' expecting '='","line 3:55 mismatched input 'H' expecting '='","line 3:57 mismatched input 'and' expecting '='","line 3:61 mismatched input 'Stipanovic' expecting '='","line 3:71 mismatched input ',' expecting '='","line 3:76 token recognition error at: '\\'","line 3:75 mismatched input '{' expecting '='","line 3:78 missing '=' at '{s}}an M}'","line 10:0 missing ',' at '}'","Error: The type of field author value is not supported."]},{id:"Kutadinata2015Dither",type:"article",raw:`@article{Kutadinata2015Dither,
   title={Dither Re-use in {N}ash equilibrium seeking},
   author={Kutadinata, Ronny J. and Moase, William H. and Manzie, Chris},
   journal={IEEE Trans. Autom. Contr.},
@@ -1698,7 +1698,7 @@ Noncooperative Dynamical Systems},
   publisher={Springer}
 }
 
-`},{id:"Kebriaei2012On",type:"article",raw:`@article{Kebriaei2012On,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:15 token recognition error at: '\\'","line 3:16 token recognition error at: '''","line 3:14 mismatched input '{' expecting '='","line 3:18 mismatched input '}' expecting '='","Error: The type of field author value is not supported."]},{id:"Kebriaei2012On",type:"article",raw:`@article{Kebriaei2012On,
   title={On the stability of quadratic dynamics in discrete time n-player Cournot games},
   author={Kebriaei, Hamed and Rahimi-Kian, Ashkan},
   journal={Automatica},
@@ -1760,7 +1760,7 @@ Noncooperative Dynamical Systems},
   year={2003},
   publisher={Springer}
 }
-`},{id:"nessah2014existence",type:"article",raw:`@article{nessah2014existence,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:30 token recognition error at: '\\'","line 3:31 token recognition error at: '''","line 3:29 mismatched input '{' expecting '='","line 3:33 mismatched input '}' expecting '='","Error: The type of field author value is not supported."]},{id:"nessah2014existence",type:"article",raw:`@article{nessah2014existence,
   title={On the existence of strong {N}ash equilibria},
   author={Nessah, Rabia and Tian, Guoqiang},
   journal={Journal of Mathematical Analysis and Applications},
@@ -1936,7 +1936,7 @@ Noncooperative Dynamical Systems},
   pages={719-731},
   year={1991},
 }
-`},{id:"Morimoto2016Subsidy",type:"article",raw:`@article{Morimoto2016Subsidy,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:22 token recognition error at: '.'","line 3:21 mismatched input 'K' expecting '='","line 3:24 mismatched input 'and' expecting '='","line 3:30 token recognition error at: '\\'","line 3:28 mismatched input 'Ko' expecting '='","line 3:31 mismatched input 'c' expecting '='","line 3:32 missing '=' at '{c}'","line 3:35 extraneous input 'ak' expecting ','","line 3:40 token recognition error at: '\\'","Error: The type of field author value is not supported."]},{id:"Morimoto2016Subsidy",type:"article",raw:`@article{Morimoto2016Subsidy,
   title={Subsidy-Based Control of Heterogeneous Multiagent Systems Modeled by Replicator Dynamics},
   author={Morimoto, Takuya and Kanazawa, Takafumi and Ushio, Toshimitsu},
   journal={IEEE Trans. Autom. Contr.},
@@ -1962,7 +1962,7 @@ Noncooperative Dynamical Systems},
   year={2015},
   publisher={IEEE}
 }
-`},{type:"error",id:"",raw:`@article{dindovs2006better,
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:15 token recognition error at: '\\'","line 3:16 token recognition error at: '''","line 3:14 mismatched input '{' expecting '='","line 3:18 mismatched input '}' expecting '='","Error: The type of field author value is not supported."]},{type:"error",id:"",raw:`@article{dindovs2006better,
   title={Better-reply dynamics and global convergence to {N}ash equilibrium in aggregative games},
   author={Dindo{\\v{s}}, Martin and Mezzetti, Claudio},
   journal={Games and Economic Behavior},
@@ -1972,4 +1972,4 @@ Noncooperative Dynamical Systems},
   year={2006},
   publisher={Elsevier}
 }
-`}];function s(){return e.jsx("div",{children:JSON.stringify(t)})}const l=Object.freeze(Object.defineProperty({__proto__:null,default:s},Symbol.toStringTag,{value:"Module"})),h={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Loading:{type:"standard",definedAtData:{filePathToShowToUser:"vike-react/__internal/integration/Loading",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:n}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"vike-react/__internal/integration/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:a}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"vike-react/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},Layout:{type:"cumulative",definedAtData:[{filePathToShowToUser:"/layouts/LayoutDefault.tsx",fileExportPathToShowToUser:[]}],valueSerialized:[{type:"pointer-import",value:i}]},title:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+config.ts",fileExportPathToShowToUser:["default","title"]},valueSerialized:{type:"js-serialized",value:"My Vike App"}},onPageTransitionEnd:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+onPageTransitionEnd.ts",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:r}},onPageTransitionStart:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+onPageTransitionStart.ts",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:o}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/publications/+Page.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:l}}};export{h as configValuesSerialized};
+`,errors:["line 3:9 mismatched input '{' expecting {STRING_LITERAL, INTEGER_LITERAL}","line 3:16 token recognition error at: '\\'","line 3:15 mismatched input '{' expecting '='","line 3:18 missing '=' at '{s}}, Martin and Mezzetti, Claudio}'","line 10:0 missing ',' at '}'","Error: The type of field author value is not supported."]}];function N(){return a.jsx("div",{children:j.map((e,i)=>a.jsx(L,{entry:e},i))})}const x=Object.freeze(Object.defineProperty({__proto__:null,default:N},Symbol.toStringTag,{value:"Module"})),q={isClientRuntimeLoaded:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:!0}},onBeforeRenderEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},dataEnv:{type:"computed",definedAtData:null,valueSerialized:{type:"js-serialized",value:null}},Loading:{type:"standard",definedAtData:{filePathToShowToUser:"vike-react/__internal/integration/Loading",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:h}},onRenderClient:{type:"standard",definedAtData:{filePathToShowToUser:"vike-react/__internal/integration/onRenderClient",fileExportPathToShowToUser:[]},valueSerialized:{type:"pointer-import",value:g}},hydrationCanBeAborted:{type:"standard",definedAtData:{filePathToShowToUser:"vike-react/config",fileExportPathToShowToUser:["default","hydrationCanBeAborted"]},valueSerialized:{type:"js-serialized",value:!0}},Layout:{type:"cumulative",definedAtData:[{filePathToShowToUser:"/layouts/Layout.tsx",fileExportPathToShowToUser:[]}],valueSerialized:[{type:"pointer-import",value:y}]},title:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+config.ts",fileExportPathToShowToUser:["default","title"]},valueSerialized:{type:"js-serialized",value:"Yan Yuyue's Homepage"}},onPageTransitionEnd:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+onPageTransitionEnd.ts",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:b}},onPageTransitionStart:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/+onPageTransitionStart.ts",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:E}},Page:{type:"standard",definedAtData:{filePathToShowToUser:"/pages/publications/+Page.tsx",fileExportPathToShowToUser:[]},valueSerialized:{type:"plus-file",exportValues:x}}};export{q as configValuesSerialized};
