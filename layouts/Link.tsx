@@ -44,7 +44,10 @@ export const Menu = (props: HTMLAttributes<HTMLDivElement> & {
     <MenuContainer style={{
       left: positionX,
       top: positionY,
-    }} onBlur={onClose}>
+    }} onBlur={() => {
+      // TODO, BUG cannot close clicking outside
+      onClose?.();
+    }}>
       <MenuWrapper {...rest} />
     </MenuContainer>,
     document.getElementById('portal-root')!,

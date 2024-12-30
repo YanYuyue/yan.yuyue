@@ -6,7 +6,7 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { FaBars, FaBarsStaggered } from "react-icons/fa6";
 import { useTheme } from '../utils/theme';
 import { css, cx } from '@linaria/core';
-import { ButtonHTMLAttributes, PropsWithChildren, useState } from 'react';
+import { ButtonHTMLAttributes, forwardRef, PropsWithChildren, useRef, useState } from 'react';
 import { useBreakpoint } from '../utils/style';
 import { useDisclosure } from '../utils/useDisclosure';
 
@@ -43,8 +43,8 @@ function Logo() {
   );
 }
 
-function IconButton(props: ButtonHTMLAttributes<HTMLButtonElement>) {
-  return <button className={cx(
+const IconButton = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLButtonElement>>((props, ref) => {
+  return <button ref={ref} className={cx(
     'clickable-icon',
     css`
       display: flex;
@@ -67,7 +67,7 @@ function IconButton(props: ButtonHTMLAttributes<HTMLButtonElement>) {
       }
     `
   )} {...props} />
-}
+})
 
 const Links = (props: { onClick?: () => void }) => <>
   <Link href="/" {...props}>Welcome</Link>
@@ -83,7 +83,7 @@ export function NavBar() {
   const d = useDisclosure();
   const [pos, setPos] = useState([0, 0]);
 
-
+  const ref = useRef<HTMLButtonElement>(null);
 
   return <NavBarContainer>
     <NavBarWrapper>
@@ -93,15 +93,16 @@ export function NavBar() {
 
       <div className='container'>
         {/* full-size */}
-        {breakpoint != 'sm' && <Links />}
-        {breakpoint == 'sm' && <>
+        {breakpoint == 'lg' && <Links />}
+        {breakpoint != 'lg' && <>
           <Menu {...d} positionX={pos[0]} positionY={pos[1]}>
             <Links onClick={d.onClose}/>
           </Menu>
           <IconButton
+            ref={ref}
             onClick={(e) => {
-              setPos([e.clientX, e.clientY]);
-              d.onOpen();
+              setPos([e.clientX, e.clientY + 30]);
+              d.onToggle();
             }}
           >
             {d.isOpen ? <FaBarsStaggered /> : <FaBars />}
