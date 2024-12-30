@@ -1,13 +1,24 @@
-import React from "react";
+import { cx } from "@linaria/core";
+import { styled } from "@linaria/react";
 import { usePageContext } from "vike-react/usePageContext";
+
+const LinkAnchor = styled.a`
+
+  padding: 2px 10px;
+  margin-left: -10px;
+
+  &.is-active {
+    background-color: var(--gray-6)
+  }
+`
 
 export function Link({ href, children }: { href: string; children: string }) {
   const pageContext = usePageContext();
   const { urlPathname } = pageContext;
   const isActive = href === "/" ? urlPathname === href : urlPathname.startsWith(href);
   return (
-    <a href={href} className={isActive ? "is-active" : undefined}>
+    <LinkAnchor href={href} className={cx(isActive && "is-active")}>
       {children}
-    </a>
+    </LinkAnchor>
   );
 }

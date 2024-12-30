@@ -1,7 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 
 import content from './page.md'
-import { styled } from '@linaria/react'
 import { useState } from 'react'
 
 

@@ -20,7 +20,7 @@ interface PublicationProps {
 const PublicationWrapper = styled.div`
   padding: 1rem;
   margin: 1rem 0;
-  border: 1px solid #eee;
+  border: 1px solid var(--gray-6);
   border-radius: 4px;
   transition: box-shadow 0.2s ease-in-out;
 
@@ -31,12 +31,12 @@ const PublicationWrapper = styled.div`
 
 const Title = styled.h3`
   margin: 0 0 0.5rem 0;
-  color: #2c3e50;
+  color: var(--gray-2);
   font-size: 1.1rem;
 `;
 
 const DOILink = styled.a`
-  color: #3498db;
+  color: var(--blue-3);
   text-decoration: none;
   
   &:hover {
@@ -45,7 +45,7 @@ const DOILink = styled.a`
 `;
 
 const AuthorListWrapper = styled.div`
-  color: #34495e;
+  color: var(--gray-3);
   margin-bottom: 0.5rem;
   font-style: italic;
 
