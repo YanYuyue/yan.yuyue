@@ -2,9 +2,11 @@ import react from '@vitejs/plugin-react'
 import vike from 'vike/plugin'
 import { UserConfig } from 'vite'
 import { BibtexParser, Entry } from "bibtex-js-parser"
+import wyw from '@wyw-in-js/vite'
 
 const config: UserConfig = {
   plugins: [
+    wyw(),
     {
       name: 'transform-assets',
       transform(code, id) {
@@ -22,29 +24,27 @@ const config: UserConfig = {
           }
           const parsed = pieces.map(c => {
             let res: Entry | undefined = undefined;
+            const errors: string[] = [];
+            BibtexParser.setErrorHandler((e) => errors.push(e));
             try {
               res = BibtexParser.parseToJSON(c)?.[0];
             } catch (e) {
-              console.error(String(e));
+              errors.push(String(e));
             }
-            return res ?? { type: 'error', id: '', raw: c };
+            return res ?? { type: 'error', id: '', raw: c, errors };
           });
           return `export default ${JSON.stringify(parsed)}`
         }
       }
     },
+    react(),
     vike({
       prerender: true,
     }),
-    react({ 
-      babel: { 
-        plugins: [["babel-plugin-styled-components"]]
-      } 
-    }),
   ],
-  ssr: {
-    noExternal: ['styled-components']
-  }
+  // ssr: {
+  //   noExternal: ['styled-components']
+  // }
 }
 
 export default config

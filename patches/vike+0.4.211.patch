@@ -1,0 +1,20 @@
+diff --git a/node_modules/vike/dist/esm/node/runtime/renderPage/getPageAssets/retrieveAssetsDev.js b/node_modules/vike/dist/esm/node/runtime/renderPage/getPageAssets/retrieveAssetsDev.js
+index 0639ba9..7c80835 100644
+--- a/node_modules/vike/dist/esm/node/runtime/renderPage/getPageAssets/retrieveAssetsDev.js
++++ b/node_modules/vike/dist/esm/node/runtime/renderPage/getPageAssets/retrieveAssetsDev.js
+@@ -60,8 +60,13 @@ function collectCss(mod, styleUrls, visitedModules, importer) {
+ }
+ function isStyle(mod) {
+     if (styleFileRE.test(mod.url) || (mod.id && /\?vue&type=style/.test(mod.id))) {
+-        // `mod.type` seems broken
+-        assert(mod.type === 'js');
++        if (mod.id.includes('wyw-in-js') && mod.type === 'css') {
++            // special case for Linaria & WYW-in-JS
++            // do nothing
++        } else {
++            // `mod.type` seems broken
++            assert(mod.type === 'js');
++        }
+         // logModule(mod)
+         return true;
+     }

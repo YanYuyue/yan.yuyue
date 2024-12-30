@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from '@linaria/react';
 import React from 'react';
 import { parseAuthor } from './author';
 import { Entry } from 'bibtex-js-parser';

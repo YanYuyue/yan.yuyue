@@ -6,7 +6,7 @@ import { Counter } from './Counter'
 import ReactMarkdown from 'react-markdown'
 
 import content from './page.md'
-import styled from 'styled-components'
+import { styled } from '@linaria/react'
 
 const D = styled.div`
   color: red;

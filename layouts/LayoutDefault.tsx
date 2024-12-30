@@ -1,8 +1,10 @@
 import "./style.css";
-import styled from "styled-components";
+import { styled } from '@linaria/react';
 import React from "react";
 import logoUrl from "../assets/logo.svg";
 import { Link } from "../components/Link.js";
+import { PageContext } from "vike/types";
+import { PageContextProvider } from "vike-react/usePageContext";
 
 const Container = styled.div`
   /* display: flex; */
@@ -45,6 +47,16 @@ export default function LayoutDefault({ children }: { children: React.ReactNode 
       <NavBar />
       <Content>{children}</Content>
     </Container>
+  );
+}
+
+export function LayoutRoot({ children, pageContext }: { children: React.ReactNode; pageContext: PageContext }) {
+  return (
+    <React.StrictMode>
+      <PageContextProvider pageContext={pageContext}>
+        <LayoutDefault>{children}</LayoutDefault>
+      </PageContextProvider>
+    </React.StrictMode>
   );
 }
 

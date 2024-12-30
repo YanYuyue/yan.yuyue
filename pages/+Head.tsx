@@ -1,6 +1,6 @@
 // https://vike.dev/Head
 
-import React from "react";
+// TODO replace a normal logo
 import logoUrl from "../assets/logo.svg";
 
 export default function HeadDefault() {
