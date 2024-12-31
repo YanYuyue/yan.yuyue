@@ -9,6 +9,10 @@ import { FaUniversity } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { css } from "@linaria/core";
 
+
+import l from './_info';
+const { name, location, institute, email } = l;
+
 const PhotoBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,6 +56,8 @@ const InfoBox = styled.div`
   align-items: center;
 `
 
+
+
 export const PhotoBox = () => {
   return <PhotoBoxContainer>
     <Photo src={photo} />
@@ -59,14 +65,22 @@ export const PhotoBox = () => {
     <div className={css`
       font-size: xx-large;
       padding-bottom: 0.5em;
-    `}>YAN, Yuyue</div>
+    `}>{name}</div>
     <InfoBox>
       <IoLocation />
-      <span>1</span>
+      <a href={`https://www.google.com/maps/search/${encodeURI(location)}`}>
+        {location}
+      </a>
+
       <FaUniversity />
-      <span>2</span>
+      <a href={`https://www.google.com/search?q=${encodeURI(institute)}`}>
+        {institute}
+      </a>
+
       <IoMail />
-      <span>3</span>
+      <a href={`mailto:${email}`}>
+        {email}
+      </a>
     </InfoBox>
     </div>
   </PhotoBoxContainer>

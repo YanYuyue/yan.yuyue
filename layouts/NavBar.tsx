@@ -98,7 +98,7 @@ const hideOnLightMode = css`
 
 const Links = ({ onClick, showOnLgSize: _s }: { onClick?: () => void, showOnLgSize?: boolean }) => <>
   <Link href="/" onClick={onClick} className={cx(_s && showOnLgSize)}>Welcome</Link>
-  <Link href="/news" onClick={onClick} className={cx(_s && showOnLgSize)}>News</Link>
+  {/* <Link href="/news" onClick={onClick} className={cx(_s && showOnLgSize)}>News</Link> */}
   <Link href="/cv" onClick={onClick} className={cx(_s && showOnLgSize)}>CV</Link>
   <Link href="/research" onClick={onClick} className={cx(_s && showOnLgSize)}>Research</Link>
   <Link href="/publications" onClick={onClick} className={cx(_s && showOnLgSize)}>Publications</Link>

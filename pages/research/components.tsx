@@ -75,7 +75,14 @@ const ErrorCard = (props: { errors?: string[], raw: string }) => {
 
 // 格式化作者列表
 
-const isYan = (author: Author) => !!(author && author.first?.toLowerCase() === 'yuyue' && author.last?.toLowerCase() === 'yan');
+const isYan = (author: Author) => {
+  if (!author || author.middle || !author.last || !author.first) {
+    return false;
+  }
+  const first = author.first.toLowerCase().trim();
+  const last = author.last.toLowerCase().trim();
+  return first === 'yan' && (last === 'yuyue' || last === 'y.');
+}
 
 const formatAuthors = (authors: Author[]) => {
   return authors.map((author, index) => {
