@@ -1,4 +1,4 @@
-import ReactMarkdown from 'react-markdown'
+import MarkdownRenderer from '../../utils/MarkdownRenderer'
 
 import content from './_about.md'
 import { Container } from './Container'
@@ -10,9 +10,9 @@ export default function () {
     <Container>
       <PhotoBox />
       <div>
-        <ReactMarkdown>
+        <MarkdownRenderer>
           {content}
-        </ReactMarkdown>
+        </MarkdownRenderer>
 
         <h1>News</h1>
         <NewsList />

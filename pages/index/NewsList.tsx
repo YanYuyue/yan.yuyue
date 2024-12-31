@@ -1,4 +1,4 @@
-import ReactMarkdown from "react-markdown";
+import MarkdownRenderer from "../../utils/MarkdownRenderer";
 import newsList, { DateType } from "./news-list"
 import { DateTime } from 'luxon';
 import { css } from "@linaria/core";
@@ -12,7 +12,7 @@ export const NewsCard = (props: {
   const dateStr = dateObject.toFormat('ccc, LLL d, yyyy');
   return <div>
     <div className={css`
-      color: var(--blue-2);
+      color: var(--blue-3);
       font-size: lg;
       font-weight: bold;
       padding-top: 1.5em;
@@ -29,7 +29,7 @@ export const NewsCard = (props: {
         margin-bottom: 0.5rem;
       }
     `}>
-      <ReactMarkdown>{props.content}</ReactMarkdown>
+      <MarkdownRenderer>{props.content}</MarkdownRenderer>
     </div>
   </div>
 }

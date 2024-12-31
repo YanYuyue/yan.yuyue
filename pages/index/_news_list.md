@@ -42,3 +42,5 @@ Q.E.D.
 # date: 2024/12/29
 
 test news 2
+
+[article link](/articles/test-1)
