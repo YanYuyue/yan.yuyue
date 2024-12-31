@@ -1,8 +1,30 @@
 import MarkdownRenderer from "../../utils/MarkdownRenderer";
-import newsList, { DateType } from "./news-list"
 import { DateTime } from 'luxon';
 import { css } from "@linaria/core";
 
+import { MarkedMarkdownItem, splitByMarkers, SplitByMarkersReturn } from '../../utils/markdown-split';
+import newsListRaw from './_news_list.md';
+
+// Match date formats: YYYY-MM-DD, YYYY/MM/DD
+const datePattern = /^#\s*date\s*:\s*((\d{4}\s*[-/]\s*\d{1,2}\s*[-/]\s*\d{1,2}))\s*$/;
+
+function parseDate(input: string) {
+  input = (input || '').replace(/\s+/g, '');
+  const [y, m, d] = input.split(/[-/]/g, 3);
+  return {
+    year: Number.isNaN(y) ? 1 : Number(y),
+    month: Number.isNaN(m) ? 1 : Number(m), // 1-based
+    day: Number.isNaN(d) ? 1 : Number(d),
+  };
+}
+
+export type DateType = ReturnType<typeof parseDate>;
+
+export type NewsItem = MarkedMarkdownItem<DateType>;
+
+export type NewsType = SplitByMarkersReturn<DateType>;
+
+const newsList = splitByMarkers(newsListRaw, datePattern, parseDate);
 
 export const NewsCard = (props: {
   date: DateType,

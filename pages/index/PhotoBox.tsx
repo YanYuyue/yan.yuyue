@@ -1,5 +1,5 @@
 import { HtmlStyledTag, styled } from "@linaria/react";
-import { mediaQueryLessOrEqual } from "../../utils/style";
+import { mediaQueryLessOrEqual, mediaQueryMoreOrEqual } from "../../utils/style";
 
 import photo from '../../assets/photo.jpg?url';
 import { FC, ImgHTMLAttributes, JSX } from "react";
@@ -14,16 +14,24 @@ import l from './_info';
 const { name, location, institute, email } = l;
 
 const PhotoBoxContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: block;
   margin-right: 16px;
   align-items: stretch;
 
+`;
+
+const PhotoBoxWrapper = styled.div`
+  
+  ${mediaQueryMoreOrEqual('lg')} {
+    position: sticky;
+    top: 20px;
+  }
   ${mediaQueryLessOrEqual('md')} {
+    display: flex;
     flex-direction: row;
     margin-right: 0;
   }
-`;
+`
 
 const Photo = styled.img`
   width: 280px;
@@ -60,28 +68,30 @@ const InfoBox = styled.div`
 
 export const PhotoBox = () => {
   return <PhotoBoxContainer>
-    <Photo src={photo} />
-    <div>
-    <div className={css`
-      font-size: xx-large;
-      padding-bottom: 0.5em;
-    `}>{name}</div>
-    <InfoBox>
-      <IoLocation />
-      <a href={`https://www.google.com/maps/search/${encodeURI(location)}`}>
-        {location}
-      </a>
+    <PhotoBoxWrapper>
+      <Photo src={photo} />
+      <div>
+        <div className={css`
+          font-size: xx-large;
+          padding-bottom: 0.5em;
+        `}>{name}</div>
+        <InfoBox>
+          <IoLocation />
+          <a href={`https://www.google.com/maps/search/${encodeURI(location)}`}>
+            {location}
+          </a>
 
-      <FaUniversity />
-      <a href={`https://www.google.com/search?q=${encodeURI(institute)}`}>
-        {institute}
-      </a>
+          <FaUniversity />
+          <a href={`https://www.google.com/search?q=${encodeURI(institute)}`}>
+            {institute}
+          </a>
 
-      <IoMail />
-      <a href={`mailto:${email}`}>
-        {email}
-      </a>
-    </InfoBox>
-    </div>
+          <IoMail />
+          <a href={`mailto:${email}`}>
+            {email}
+          </a>
+        </InfoBox>
+      </div>
+    </PhotoBoxWrapper>
   </PhotoBoxContainer>
 };

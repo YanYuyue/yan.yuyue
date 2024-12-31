@@ -8,6 +8,7 @@ import { useTheme } from '../utils/theme';
 const FooterContainer = styled.div`
   border-top: 1px solid var(--gray-5);
   width: 100%;
+  height: 36px;
 `;
 
 const FooterWrapper = styled.div`

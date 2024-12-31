@@ -13,11 +13,11 @@ import { useDisclosure } from '../utils/useDisclosure';
 const NavBarContainer = styled.div`
   border-bottom: 1px solid var(--gray-5);
   width: 100%;
+  height: 80px;
 `;
 
 const NavBarWrapper = styled.div`
   padding: 20px;
-  height: 80px;
   max-width: var(--layout-max-width);
   margin: 0 auto;
 

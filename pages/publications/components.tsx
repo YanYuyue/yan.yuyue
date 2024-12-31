@@ -35,7 +35,7 @@ const ErrorCard = (props: { errors?: string[], raw: string }) => {
 // author
 
 const AuthorListWrapper = styled.div`
-  display: inline-block;
+  display: inline;
   font-style: italic;
 
   & > .author:nth-child(1n+2)::before {
@@ -116,7 +116,7 @@ const DOILink = styled.a`
 export const Publication = ({ entry, index }: PublicationProps) => {
   return (
     <PublicationWrapper>
-      {!!index && <span>[{index}]</span>}
+      {!!index && <span>[{index}] </span>}
       <AuthorList entry={entry} />
       <span>{'. '}</span>
       <BasicInfo entry={entry} />

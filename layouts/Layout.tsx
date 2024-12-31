@@ -21,7 +21,7 @@ const PageContainer = styled.div`
 const PageContent = styled.div`
   padding: 20px;
   padding-bottom: 50px;
-  min-height: 100vh;
+  min-height: calc(100vh - 116px);
 
   opacity: 1;
   transition: opacity 0.3s ease-in-out;

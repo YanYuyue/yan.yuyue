@@ -3,6 +3,7 @@ import vike from 'vike/plugin'
 import { UserConfig } from 'vite'
 import wyw from '@wyw-in-js/vite'
 import transformAssets from './vite-plugin/transform-assets'
+import mdImgSplit from './vite-plugin/md-img-split'
 
 const config: UserConfig = {
   plugins: [
@@ -13,14 +14,12 @@ const config: UserConfig = {
       },
     }),
     transformAssets(),
+    mdImgSplit(),
     react(),
     vike({
       prerender: true,
     }),
   ],
-  // ssr: {
-  //   noExternal: ['styled-components']
-  // }
 }
 
 export default config

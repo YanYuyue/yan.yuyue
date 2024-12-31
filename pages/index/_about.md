@@ -1,7 +1,3 @@
 # About Me
 
-test content
-
-`test blockquote`
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+My name is Yuyue. I received the M.E. degree and the Ph.D. degree in Systems and Control Engineering from Tokyo Institute of Technology, Tokyo, Japan, in 2019 and 2022, respectively. I was a Research Fellow with the Department of Systems and Control Engineering, Tokyo Institute of Technology, in 2023, and then joined the Graduate School of Engineering, Osaka University, Osaka, Japan, in 2024, where I am currently a Specially Appointed Research Fellow. My research interests include game theory, stability of nonlinear dynamical systems, hybrid systems, and noncooperative systems; and applications to multiagent systems, transportation systems, financial dynamics, and economic/social system.
