@@ -11,7 +11,7 @@ const MenuContainer = styled.div`
 const MenuWrapper = styled.div`
   z-index: 120;
   background-color: var(--gray-7);
-  border: var(--gray-5);
+  border: 1px solid var(--gray-5);
   box-shadow: 0 0 20px #00000030;
 
   display: flex;
@@ -20,8 +20,10 @@ const MenuWrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  min-width: 100px;
+  min-width: 120px;
   min-height: 16px;
+
+  border-radius: 10px;
 
 `
 
@@ -72,12 +74,19 @@ const LinkAnchor = styled.a`
   }
 `
 
-export function Link({ href, children, onClick }: { href: string; children: string, onClick?: () => void }) {
+export function Link({ 
+  href, children, onClick, className, ...rest
+}: { href: string; children: string, onClick?: () => void } & HTMLAttributes<HTMLDivElement>) {
   const pageContext = usePageContext();
   const { urlPathname } = pageContext;
   const isActive = href === "/" ? urlPathname === href : urlPathname.startsWith(href);
   return (
-    <LinkAnchor href={href} className={cx(isActive && "is-active")} onClick={onClick}>
+    <LinkAnchor 
+      href={href} 
+      className={cx(isActive && "is-active", className)} 
+      onClick={onClick}
+      {...rest}
+    >
       {children}
     </LinkAnchor>
   );

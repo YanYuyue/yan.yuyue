@@ -4,10 +4,10 @@ import { styled } from '@linaria/react';
 import { Link, Menu } from "./Link";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { FaBars, FaBarsStaggered } from "react-icons/fa6";
-import { useTheme } from '../utils/theme';
+import { darkModeQuery, lightModeQuery, useTheme } from '../utils/theme';
 import { css, cx } from '@linaria/core';
 import { ButtonHTMLAttributes, forwardRef, PropsWithChildren, useRef, useState } from 'react';
-import { useBreakpoint } from '../utils/style';
+import { mediaQueryMoreOrEqual, mediaQueryLessOrEqual, useBreakpoint } from '../utils/style';
 import { useDisclosure } from '../utils/useDisclosure';
 
 const NavBarContainer = styled.div`
@@ -45,6 +45,7 @@ function Logo() {
 }
 
 const IconButton = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLButtonElement>>((props, ref) => {
+  const { className, ...rest } = props;
   return <button ref={ref} className={cx(
     'clickable-icon',
     css`
@@ -66,20 +67,45 @@ const IconButton = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLButton
       &:focus {
         box-shadow: inherit;
       }
-    `
-  )} {...props} />
+    `,
+    className,
+  )} {...rest} />
 })
 
-const Links = (props: { onClick?: () => void }) => <>
-  <Link href="/" {...props}>Welcome</Link>
-  <Link href="/news" {...props}>News</Link>
-  <Link href="/cv" {...props}>CV</Link>
-  <Link href="/research" {...props}>Research</Link>
-  <Link href="/publications" {...props}>Publications</Link>
+const showOnLgSize = css`
+  ${mediaQueryLessOrEqual('md')} {
+    display: none;
+  }
+`
+
+const hideOnLgSize = css`
+  ${mediaQueryMoreOrEqual('lg')} {
+    display: none; 
+  }
+`
+
+const hideOnDarkMode = css`
+  ${darkModeQuery} & {
+    display: none;
+  }
+`
+
+const hideOnLightMode = css`
+  ${lightModeQuery} & { 
+    display: none;
+  }
+`
+
+const Links = ({ onClick, showOnLgSize: _s }: { onClick?: () => void, showOnLgSize?: boolean }) => <>
+  <Link href="/" onClick={onClick} className={cx(_s && showOnLgSize)}>Welcome</Link>
+  <Link href="/news" onClick={onClick} className={cx(_s && showOnLgSize)}>News</Link>
+  <Link href="/cv" onClick={onClick} className={cx(_s && showOnLgSize)}>CV</Link>
+  <Link href="/research" onClick={onClick} className={cx(_s && showOnLgSize)}>Research</Link>
+  <Link href="/publications" onClick={onClick} className={cx(_s && showOnLgSize)}>Publications</Link>
 </>
 
 export function NavBar() {
-  const { theme, setTheme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme();
   const breakpoint = useBreakpoint();
   const d = useDisclosure();
   const [pos, setPos] = useState([0, 0]);
@@ -94,27 +120,31 @@ export function NavBar() {
 
       <div className='container'>
         {/* full-size */}
-        {breakpoint == 'lg' && <Links />}
+
+        <Links showOnLgSize />
+
+        <IconButton
+          className={hideOnLgSize}
+          ref={ref}
+          onClick={(e) => {
+            setPos([e.clientX, e.clientY + 30]);
+            d.onToggle();
+          }}
+        >
+          {d.isOpen ? <FaBarsStaggered /> : <FaBars />}
+        </IconButton>
         {breakpoint != 'lg' && <>
           <Menu {...d} positionX={pos[0]} positionY={pos[1]}>
-            <Links onClick={d.onClose}/>
+            <Links onClick={d.onClose} />
           </Menu>
-          <IconButton
-            ref={ref}
-            onClick={(e) => {
-              setPos([e.clientX, e.clientY + 30]);
-              d.onToggle();
-            }}
-          >
-            {d.isOpen ? <FaBarsStaggered /> : <FaBars />}
-          </IconButton>
         </>}
 
 
         <IconButton
           onClick={toggleTheme}
         >
-          {theme === 'dark' ? <FaMoon /> : <FaSun />}
+          <FaMoon className={hideOnLightMode} />
+          <FaSun className={hideOnDarkMode} />
         </IconButton>
       </div>
     </NavBarWrapper>

@@ -1,5 +1,5 @@
 import { styled } from "@linaria/react";
-import { mediaQueryMaxWidth } from "../../utils/style";
+import { mediaQueryLessOrEqual } from "../../utils/style";
 
 
 export const Container = styled.div`
@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: stretch;
 
-  ${mediaQueryMaxWidth('md')} {
+  ${mediaQueryLessOrEqual('md')} {
     & {
       flex-direction: column;
     }

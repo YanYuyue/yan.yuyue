@@ -1,22 +1,27 @@
-import ReactMarkdown from "react-markdown";
-import cv from './cv.md';
 import cvPdf from '../../assets/cv.pdf?url';
 
 import { FaDownload } from "react-icons/fa";
 import { Container } from "./components";
 
+const triggerDownload = () => {
+  const anchor = document.createElement("a");
+  anchor.href = cvPdf;
+  anchor.download = 'cv.pdf';
+  anchor.click();
+}
+
 export default function () {
   return (
     <Container>
-      <div className="cv-dl clickable-icon" onClick={() => {
-        const anchor = document.createElement("a");
-        anchor.href = cvPdf;
-        anchor.download = 'cv.pdf';
-        anchor.click();
-      }}>
-        <FaDownload />
-      </div>
-      <ReactMarkdown>{cv}</ReactMarkdown>
+      <h1>CV
+        <div className="clickable-icon cv-dl" onClick={triggerDownload}>
+          <FaDownload />
+        </div>
+      </h1>
+
+      <object data={cvPdf} type="application/pdf" width='100%' height='800px'>
+        Click the <FaDownload /> icon to download the PDF file.
+      </object>
     </Container>
   )
 }

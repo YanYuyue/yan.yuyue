@@ -1,5 +1,5 @@
 import { css } from "@linaria/core";
-import { darkModeQuery } from "../utils/style";
+import { darkModeQuery } from "../utils/theme";
 
 export const globalStyles = css`
 

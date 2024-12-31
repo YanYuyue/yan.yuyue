@@ -2,10 +2,15 @@ import { styled } from '@linaria/react'
 
 export const Container = styled.div`
   position: relative;
-  & > .cv-dl {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: gray;
+
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  & .cv-dl {
+    display: inline-block;
+    font-size: 0.8em;
   }
 `;

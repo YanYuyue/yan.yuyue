@@ -1,5 +1,5 @@
 import { HtmlStyledTag, styled } from "@linaria/react";
-import { mediaQueryMaxWidth, mediaQueryMinWidth } from "../../utils/style";
+import { mediaQueryLessOrEqual } from "../../utils/style";
 
 import photo from '../../assets/photo.jpg?url';
 import { FC, ImgHTMLAttributes, JSX } from "react";
@@ -15,29 +15,29 @@ const PhotoBoxContainer = styled.div`
   margin-right: 16px;
   align-items: stretch;
 
-  ${mediaQueryMaxWidth('md')} {
+  ${mediaQueryLessOrEqual('md')} {
     flex-direction: row;
     margin-right: 0;
   }
 `;
 
 const Photo = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   object-fit: contain;
   border-radius: 40px;
   background-color: var(--gray-6);
 
   margin-bottom: 16px;
 
-  ${mediaQueryMaxWidth('md')} {
+  ${mediaQueryLessOrEqual('md')} {
     margin-right: 16px;
     margin-bottom: 0;
     width: 240px;
     height: 240px;
   }
 
-  ${mediaQueryMaxWidth('sm')} {
+  ${mediaQueryLessOrEqual('sm')} {
     width: 200px;
     height: 200px;
   }
