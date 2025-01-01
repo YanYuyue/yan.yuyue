@@ -31,7 +31,6 @@ export default function mdImgSplit(options?: MdImgSplitOptions) {
           importPath = importPath.substring(1);
         }
         const publicPath = join(root, publicDir, importPath)
-        console.log("p", publicPath, id)
         const relativePath = relative(dirname(id), publicPath)
 
         const imgId = importStatements.length
